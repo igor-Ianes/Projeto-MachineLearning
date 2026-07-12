@@ -59,40 +59,18 @@ O objetivo é construir um modelo capaz de aprender os padrões existentes nas c
 <a id="pre-requisitos"></a>
 ## Pré requisitos
 
-Antes de começar, você precisará de:
+- Python 3.10+
+- `pandas`
+- `numpy`
+- `matplotlib`
+- `scikit-learn`
+- `jupyter`
+- `kagglehub`
 
-- Compilador C/C++ (recomendado: GCC)
-
-Verifique se já possui instalado:
+Execute o seguite comando para instalação:
   ```sh
-  gcc –version
+  pip install -r requirements.txt
   ```
-
-### Dependências
-
-#### 🪟 Windows (MinGW)
-
-É necessário baixar manualmente a biblioteca GLFW:
-
-https://www.glfw.org/download
-
-Após o download:
-
-1. Extraia o arquivo  
-2. Copie a pasta `GLFW.3.4` para dentro do diretório `GLFW` do projeto  
-
----
-
-#### 🐧 Linux (Ubuntu/Debian)
-
-No Linux, não é necessário baixar o GLFW manualmente.
-
-Instale as dependências com:
-
-```sh
-sudo apt update
-sudo apt install libglfw3-dev libgl1-mesa-dev libxi-dev
-```
 
 ### Execução
 
@@ -100,203 +78,13 @@ Aqui o passo a passo de como executar o projeto.
 
 1. Clone o repositorio
    ```sh
-   git clone https://github.com/igor-Ianes/Projeto-Processamento-Grafico
-   ```
-2. Dentro da pasta Projeto cole a pasta GLFW.3.4 na pasta GLFW (Apenas Windows). 
-   ```js
-   cd projeto
-   ```
-3. A estrutura final do projeto deve ser esta.
-   ```js
-    Projeto/
-    ├── Assets/
-    │   ├── TextureDragon.png
-    │   ├── AsaEsquerda.obj
-    │   ├── AsaDireita.obj
-    │   ├── MontanhaNeve.obj
-    │   └── Grama.jpg
-    │   
-    ├── GLFW/
-    │   └── Glfw-3.4/
-    │       └── ...
-    │
-    ├── Glad/ 
-    │   └── ...
-    │
-    ├── Graficos3d/
-    │   ├── Headers/
-    │   │   ├── Framework/
-    │   │   │   ├── Graphics.hpp
-    │   │   │   ├── InputManager.hpp
-    │   │   │   ├── Manager.hpp
-    │   │   │   ├── MathHelper.hpp
-    │   │   │   ├── stb_Image.hpp
-    │   │   │   ├── TextureManager.hpp
-    │   │   │   └── Timer.hpp
-    │   │   │ 
-    │   │   └── Engine/
-    │   │       ├── Camera.hpp
-    │   │       ├── Graphics3d.hpp
-    │   │       ├── Math3d.hpp
-    │   │       ├── Mesh.hpp
-    │   │       ├── Object3D.hpp
-    │   │       ├── OpenGL.hpp
-    │   │       ├── Renderer3D.hpp
-    │   │       ├── Scene.hpp
-    │   │       └── Shader.hpp
-    │   │
-    │   └── Source/
-    │       ├── Engine/
-    │       │   ├── Graphics3d.cpp
-    │       │   ├── Math3d.cpp
-    │       │   ├── Renderer3D.cpp
-    │       │   ├── Scene.cpp
-    │       │   └── Shader.cpp
-    │       └── Framework/
-    │       │   ├── Graphics.cpp
-    │       │   ├── InputManager.cpp
-    │       │   ├── Manager.cpp
-    │       │   ├── TextureManager.cpp
-    │       │   └── Timer.cpp
-    │       └── main.cpp
-    └── MAKEFILE
-   ```
-
-4. execute o  `MAKEFILE` com o seguinte comando.
-   ```js
-   make all
-   ```
-
-
-## Uso
-
-Alguns exemplos da engine em execução:
-
-### Demonstrações básicas
-<p align="center">
-  <img src="Images/teapot.gif" width="40%" />
-  <img src="Images/cubo.gif" width="40%" />
-</p>
-<p align="center"><em>Teapot e cubo renderizados pela engine</em></p>
-
-### Cena dos Dragões
-<p align="center">
-  <img src="Images/dragoes.gif" width="60%" />
-</p>
-<p align="center"><em>Cena completa com múltiplos dragões</em></p>
-
-### Transformações (Cena dos Dragões)
-<p align="center">
-  <img src="Images/demonstracaoRedimensionamento.gif" width="40%" />
-  <img src="Images/demonstracaoGiroGit.gif" width="40%" />
-</p>
-<p align="center"><em>Demonstrações de escala e rotação aplicadas à cena</em></p>
-
-### Cena Final
-<p align="center">
-  <img src="Images/cenaFinalDragoes.gif" width="60%" />
-</p>
-<p align="center"><em>Cena final com adição do modulo, bandeira e gato</em></p>
-
-## Controles
-
-A seguir seguem todos os controles da engine.
-
-- `W, A, D, S, F, G, SHIFT, SPACE`: Movimentação da camera.
-- `↑ ↓ ← →`: movimentação do objeto selecionado.
-- `M, N, B, V`: movimentação do objeto selecionado no proprio eixo.
-- `1, 2, 3, 4, -, +`: Redimensionamento do objeto selecionado.
-- `TAB`: seleciona proximo objeto em loop.
-- `C`: troca de camera.
-- `Mouse`: Movimenta camera e da zoom.
-
-
-## Features:
-o projeto teve como features implementadas:
-
-* Renderização de objetos 3D a partir de um parser de .OBJ
-* Iluminação basica
-* movimentação dos objetos em todas as direções
-* Possibilidade de alternar entre os objetos
-* Possibilidade de se movimentar pela cena atraves de 3 cameras
-* Utilização de Shader próprio
-* Possibilidade de redimensionar qualquer objeto
-* Suporte a textura
-* Suporte a rotação e orbita de objetos
-* Suporte a hierarquia nos objetos
-
-### Shaders
-
-#### Vertex Shader
-   ```cpp
-   const char *vs = "#version 330 core\n"
-                     "layout (location = 0) in vec3 aPos;\n"
-                     "layout (location = 1) in vec3 aNormal;\n"
-                     "layout (location = 2) in vec2 aTex;\n"
-                     "\n"
-                     "out vec2 TexCoord;\n"
-                     "out vec3 Normal;\n"
-                     "out vec3 FragPos;\n"
-                     "\n"
-                     "uniform mat4 mvp;\n"
-                     "uniform mat4 model;\n"
-                     "\n"
-                     "void main()\n"
-                     "{\n"
-                     "    vec4 worldPos = model * vec4(aPos, 1.0);\n"
-                     "    FragPos = worldPos.xyz;\n"
-                     "\n"
-                     "    Normal = mat3(transpose(inverse(model))) * aNormal;\n"
-                     "    TexCoord = aTex;\n"
-                     "\n"
-                     "    gl_Position = mvp * vec4(aPos, 1.0);\n"
-                     "}";
-   ```
-#### Fragment Shader
-   ```sh
-   const char *fs = "#version 330 core\n"
-                     "in vec2 TexCoord;\n"
-                     "in vec3 Normal;\n"
-                     "in vec3 FragPos;\n"
-                     "\n"
-                     "out vec4 FragColor;\n"
-                     "\n"
-                     "uniform sampler2D texture1;\n"
-                     "uniform bool useTexture;\n"
-                     "uniform vec3 objColor;\n"
-                     "uniform vec3 lightDir;\n"
-                     "\n"
-                     "void main()\n"
-                     "{\n"
-                     "    vec3 baseColor;\n"
-                     "\n"
-                     "    if (useTexture)\n"
-                     "        baseColor = texture(texture1, TexCoord).rgb;\n"
-                     "    else\n"
-                     "        baseColor = objColor;\n"
-                     "\n"
-                     "    vec3 norm = normalize(Normal);\n"
-                     "    vec3 light = normalize(lightDir);\n"
-                     "\n"
-                     "    float diff = max(dot(norm, light), 0.1);\n"
-                     "\n"
-                     "    vec3 ambient = baseColor * 0.2;\n"
-                     "    vec3 diffuse = baseColor * diff;\n"
-                     "\n"
-                     "    vec3 result = ambient + diffuse;\n"
-                     "\n"
-                     "    FragColor = vec4(result, 1.0);\n"
-                     "}";
+   git clone https://github.com/igor-Ianes/Projeto-MachineLearning
    ```
 
 
 ## Desenvolvedor:
 * Nome: Igor Ianes
 * RA: 795593
-
-
-
-
 
 
 <!-- LICENSE -->
