@@ -74,8 +74,6 @@ Execute o seguite comando para instalação:
 
 ### Clonagem
 
-Aqui o passo a passo de como executar o projeto.
-
 1. Clone o repositorio
    ```sh
    git clone https://github.com/igor-Ianes/Projeto-MachineLearning
