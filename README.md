@@ -72,7 +72,7 @@ Execute o seguite comando para instalação:
   pip install -r requirements.txt
   ```
 
-### Execução
+### Clonagem
 
 Aqui o passo a passo de como executar o projeto.
 
