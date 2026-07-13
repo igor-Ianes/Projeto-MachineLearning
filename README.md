@@ -101,7 +101,7 @@ Distribuição sob a licença MIT. Veja `LICENSE.txt` para maiores informações
 
 [![Gmail](https://img.shields.io/badge/Gmail-006bed?style=flat-square&logo=gmail&logoColor=white)](https://mail.google.com/mail/?view=cm&to=igor.ianes@estudante.ufscar.br)
 
-Project Link: [https://github.com/igor-Ianes/Projeto-Processamento-Grafico](https://github.com/igor-Ianes/Projeto-Processamento-Grafico)
+Project Link: [https://github.com/igor-Ianes/Projeto-Processamento-Grafico](https://github.com/igor-Ianes/Projeto-MachineLearning)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -111,8 +111,8 @@ Project Link: [https://github.com/igor-Ianes/Projeto-Processamento-Grafico](http
 [contributors-shield]: https://img.shields.io/github/contributors/igor-Ianes/Projeto-Processamento-Grafico.svg?style=for-the-badge
 [contributors-url]: https://github.com/igor-Ianes/Projeto-Processamento-Grafico/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/igor-Ianes/Projeto-Processamento-Grafico.svg?style=for-the-badge
-[forks-url]: https://github.com/igor-Ianes/Projeto-Processamento-Grafico/network/members
-[stars-shield]: https://img.shields.io/github/stars/igor-Ianes/Projeto-Processamento-Grafico.svg?style=for-the-badge
+[forks-url]: https://github.com/igor-Ianes/Projeto-MachineLearning/network/members
+[stars-shield]: https://img.shields.io/github/stars/igor-Ianes/Projeto-MachineLearning.svg?style=for-the-badge
 [stars-url]: https://github.com/igor-Ianes/Projeto-Processamento-Grafico/stargazers
 [issues-shield]: https://img.shields.io/github/issues/igor-Ianes/Projeto-Processamento-Grafico.svg?style=for-the-badge
 [issues-url]: https://github.com/igor-Ianes/Projeto-Processamento-Grafico/issues
