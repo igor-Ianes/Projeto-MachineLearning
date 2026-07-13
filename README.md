@@ -22,10 +22,7 @@
     <li><a href="#ferramentas">Ferramentas</a></li>
     <li><a href="#objetivos">Objetivos</a></li>
     <li><a href="#pré-requisitos">Pré-requisitos</a></li>
-    <li><a href="#execução">Execução</a></li>
-    <li><a href="#uso">Uso</a></li>
-    <li><a href="#controles">Controles</a></li>
-    <li><a href="#features">Features</a></li>
+    <li><a href="#clonagem">Execução</a></li>
     <li><a href="#desenvolvedor">Desenvolvedor</a></li>
     <li><a href="#licença">Licença</a></li>
     <li><a href="#contato">Contato</a></li>
