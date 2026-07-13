@@ -101,7 +101,7 @@ Distribuição sob a licença MIT. Veja `LICENSE.txt` para maiores informações
 
 [![Gmail](https://img.shields.io/badge/Gmail-006bed?style=flat-square&logo=gmail&logoColor=white)](https://mail.google.com/mail/?view=cm&to=igor.ianes@estudante.ufscar.br)
 
-Project Link: [https://github.com/igor-Ianes/Projeto-Processamento-Grafico](https://github.com/igor-Ianes/Projeto-MachineLearning)
+Project Link: [Projeto-MachineLearning](https://github.com/igor-Ianes/Projeto-MachineLearning)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
